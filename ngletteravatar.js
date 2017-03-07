@@ -78,14 +78,14 @@ nla.directive('ngLetterAvatar', ['defaultSettings', function (defaultSettings) {
                 function _generateLetterAvatar() {
                     var c = '';
                     if (params.charCount == 2) {
-                        var _data = getFirstAndLastName(scope.data.toUpperCase());
+                        var _data = getFirstAndLastName(scope.data);
                         if (_data) {
                             c = _data;
                         } else {
-                            c = scope.data.substr(0, params.charCount).toUpperCase();
+                            c = scope.data.substr(0, params.charCount);
                         }
                     } else {
-                        c = scope.data.substr(0, params.charCount).toUpperCase();
+                        c = scope.data.substr(0, params.charCount);
                     }
                     var cobj = getCharacterObject(c, params.textColor, params.fontFamily, params.fontWeight, params.fontsize);
                     var colorIndex = '';
